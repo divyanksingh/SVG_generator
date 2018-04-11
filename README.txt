@@ -13,7 +13,7 @@ Each of these collection is appended to the tail of this list which
 serves as a queue.
 
 Once the complete input file is processed, we have our final queue 
-which is passed to the XML generator for svg file.
+which is passed to the SVG generator for svg file.
 
 [
 	['1429591293', 'True', 130], ['1429591423', 'False', 182],
@@ -21,6 +21,10 @@ which is passed to the XML generator for svg file.
 	['1429591891', 'True', 117], ['1429592008', 'False', 26],
 	...
 ]
+
+svgwrite library is used for generating the svg from change_queue
+
+	'pip install svgwrite'
 
 Each member is taken from the head of the queue and a 'rect' sub-element
 is added to the root 'svg' element. The width of each 'rect' element 
